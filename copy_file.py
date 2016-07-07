@@ -1,5 +1,6 @@
 import shutil
 import os
+import send2trash
 
 # print(shutil.copy(os.path.join(os.getcwd(), 'test/c.txt'), os.getcwd()))
 # print(shutil.copy(os.path.join(os.getcwd(), 'a.txt'),
@@ -16,4 +17,9 @@ import os
 
 # print(os.unlink(os.path.join(os.getcwd(), 'test/bb.txt')))
 # print(os.rmdir(os.path.join(os.getcwd(), 'test/inner_test')))
-print(shutil.rmtree(os.path.join(os.getcwd(), 'test/inner_test')))
+# print(shutil.rmtree(os.path.join(os.getcwd(), 'test/inner_test')))
+
+baconFile = open('bacon.txt', 'a')
+print(baconFile.write('Bacon is not a vegetable.'))
+baconFile.close()
+send2trash.send2trash('bacon.txt')
