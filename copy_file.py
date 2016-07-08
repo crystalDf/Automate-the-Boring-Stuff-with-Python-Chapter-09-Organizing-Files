@@ -19,7 +19,18 @@ import send2trash
 # print(os.rmdir(os.path.join(os.getcwd(), 'test/inner_test')))
 # print(shutil.rmtree(os.path.join(os.getcwd(), 'test/inner_test')))
 
-baconFile = open('bacon.txt', 'a')
-print(baconFile.write('Bacon is not a vegetable.'))
-baconFile.close()
-send2trash.send2trash('bacon.txt')
+# baconFile = open('bacon.txt', 'a')
+# print(baconFile.write('Bacon is not a vegetable.'))
+# baconFile.close()
+# send2trash.send2trash('bacon.txt')
+
+for folderName, subfolders, filenames in os.walk(os.getcwd()):
+    print('The current folder is ' + folderName)
+
+    for subfolder in subfolders:
+        print('SUBFOLDER OF ' + folderName + ": " + subfolder)
+
+    for filename in filenames:
+        print('FILE INSIDE ' + folderName + ': ' + filename)
+
+    print()
