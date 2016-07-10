@@ -34,4 +34,3 @@ for folderName, subfolders, filenames in os.walk(os.getcwd()):
         print('FILE INSIDE ' + folderName + ': ' + filename)
 
     print()
-

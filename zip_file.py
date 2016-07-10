@@ -8,4 +8,9 @@ print(spamInfo.file_size)
 print(spamInfo.compress_size)
 print('Compressed file is %sx smaller!' % (round(spamInfo.file_size /
                                                  spamInfo.compress_size, 2)))
+
+# exampleZip.extractall(os.path.join(os.getcwd(), 'delicious'))
+print(exampleZip.extract('spam.txt'))
+print(exampleZip.extract('spam.txt', os.path.join(os.getcwd(), 'test')))
+
 exampleZip.close()
